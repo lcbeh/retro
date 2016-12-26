@@ -6,6 +6,18 @@
   </head>
   <body>
     <h1>Retro</h1>
+
+    <ul class="retros">
+      <% for(var i = 0; i < retros.length; i++) { %>
+        <li class="retro">
+          <p><%= retros[i].learnt%></p>
+          <p><%= retros[i].successes%></p>
+          <p><%= retros[i].challenges%></p>
+          <p><%= retros[i].goals%></p>
+        </li>
+      <% } %>
+    </ul>
+
     <form action="/retros" method="post">
       <p>What did you learn yesterday?</p>
       <input type="text" name="learnt">
@@ -14,7 +26,7 @@
       <p>What did you find challenging?</p>
       <input type="text" name="challenges">
       <p>What do want you to learn today?</p>
-      <input type="text" name="goal">
+      <input type="text" name="goals">
       <input type="submit" value="submit">
     </form>
 
