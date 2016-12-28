@@ -2,23 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Retro</title>
+    <title>Retros</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Retros</h1>
+    <h1>R e t r o s</h1>
 
-    <ul class="retros">
-      <% for(var i = 0; i < retros.length; i++) { %>
-        <li class="retro">
-          <p><%= retros[i].learnt%></p>
-          <p><%= retros[i].successes%></p>
-          <p><%= retros[i].challenges%></p>
-          <p><%= retros[i].goals%></p>
-        </li>
+    <div class="retros">
+      <% if (retros.length > 0) { %>
+        <% for(var i = 0; i < retros.length; i++) { %>
+          <div class="retro">
+            <p><%= retros[i].day%></p>
+            <p><%= retros[i].learnt%></p>
+            <p><%= retros[i].successes%></p>
+            <p><%= retros[i].challenges%></p>
+            <p><%= retros[i].goals%></p>
+          </div>
+        <% } %>
       <% } %>
-    </ul>
+    </div>
 
     <form action="/retros" method="post">
+      <label for="day">Date </label>
+      <input type="date" name="day">
       <p>What did you learn yesterday?</p>
       <input type="text" name="learnt">
       <p>What were your successes?</p>

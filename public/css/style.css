@@ -1,0 +1,43 @@
+body {
+  background-color: #a5c971;
+}
+
+h1 {
+  color: #fff;
+  margin-left: 5%;
+}
+
+form {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font: Helvetica, sans-serif;
+  padding: 2%;
+  margin: 5%;
+  margin-top: 1%;
+  width: 30%;
+  float:left;
+}
+
+input {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font: Helvetica, sans-serif;
+}
+
+input[type=text] {
+  height: 100px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 98%;
+}
+
+input[type=submit] {
+  color: #fff;
+  padding: 5px 10px;
+  background-color: rgba(124, 164, 65, 0.6);
+}
+
+.retros {
+  float: left;
+}

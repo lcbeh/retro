@@ -19,6 +19,7 @@ MongoClient.connect("mongodb://" + dbuser + ":" + dbpassword + "@ds141368.mlab.c
 });
 
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
   var retrosData = db.collection('retros').find().toArray(function (err, results) {
