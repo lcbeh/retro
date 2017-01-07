@@ -13,26 +13,26 @@
       <div class="retros">
         <% for(var i = 0; i < retros.length; i++) { %>
           <div class="retro">
-            <p><%= retros[i].day%></p>
-            <p><strong>Learnt: </strong><%= retros[i].learnt%></p>
+            <h3><%= retros[i].project%></h3>
             <p><strong>Successes: </strong><%= retros[i].successes%></p>
             <p><strong>Challenges: </strong><%= retros[i].challenges%></p>
-            <p><strong>Goals: </strong><%= retros[i].goals%></p>
+            <p><strong>Learnt: </strong><%= retros[i].learnt%></p>
+            <p><strong>Puzzles: </strong><%= retros[i].goals%></p>
           </div>
         <% } %>
       </div>
     <% } %>
 
     <form action="/retros" method="post">
-      <label for="day">Date </label>
-      <input type="date" name="day">
-      <p>What did you learn yesterday?</p>
-      <textarea name="learnt" rows="8"></textarea>
-      <p>What were your successes?</p>
+      <p>Project</p>
+      <input type="text" name="project">
+      <p>What went well?</p>
       <textarea name="successes" rows="8"></textarea>
-      <p>What did you find challenging?</p>
+      <p>What didn't go so well?</p>
       <textarea name="challenges" rows="8"></textarea>
-      <p>What do want you to learn today?</p>
+      <p>What have I/we learnt?</p>
+      <textarea name="learnt" rows="8"></textarea>
+      <p>What still puzzles me/us?</p>
       <textarea name="goals" rows="8"></textarea>
       <input type="submit" value="submit">
     </form>
